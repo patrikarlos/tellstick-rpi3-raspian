@@ -11,3 +11,7 @@ apt install libconfuse-common libconfuse-dev libconfuse-doc
 cmake .
 make
 make DESTDIR=/opt install
+cp telldusd /etc/init.d/
+update-rc.d telldusd defaults
+/etc/init.d/telldusd start
+/etc/init.d/telldusd status
